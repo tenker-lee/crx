@@ -5,7 +5,6 @@ $(function(){
         chrome.runtime.getBackgroundPage(function(bg){
             alert(bg.count);
             bg.count=bg.count+1;
-        });
-        
+        });        
     });
 })
