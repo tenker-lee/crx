@@ -1,0 +1,25 @@
+{
+  "manifest_version": 2,
+  "version": "1.0.2",
+  "name": "360",
+  "description": "360",
+  "browser_action": {
+    "default_icon": "dengji.png",
+    "default_popup":"popup.html"
+  },
+  "permissions": [
+        "http://*/*", 
+        "https://*/*" 
+  ],
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "content_scripts": [
+    {
+      "matches": ["http://wwww.baidu.com/*"],
+      "js": ["content_scripts.js"],
+      "run_at": "document_end",
+      "all_frames": true
+    }
+  ]
+}
